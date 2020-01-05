@@ -1,0 +1,107 @@
+# ----------------------------------------------------------------------------
+# important files
+# ~/.profile			login configs wtih key mapping and xrandr for display
+# ~/.i3/config			i3 configs
+# ~/.tmux.conf			tmux configs with mappings for vim copy mode
+# ~/.xmodmap			allow for esc + h/j/k/l to become arrow keys
+# ~/.bashrc			shell configs
+#
+# ----------------------------------------------------------------------------
+# important changes to key maps to make it SEEM like a MAC
+#
+# REAL keys		MAPPED keys
+# alt			ctrl
+# cap lock		esc
+# windows key	alt
+# ctrl			no idea
+#
+# ----------------------------------------------------------------------------
+# commands
+#
+# REAL keys					commands
+#
+# alt + x 					tmux copy mode
+#   v 						visual in tmux copy mode
+#   y 						yank in tmux copy mode
+#
+# alt + c					copy
+# alt + v					paste
+#
+# window + 1				move to workspace
+# window + j				move to left workspace
+# window + ;				move to right workspace
+# window + d				open gui application
+# window + Q				kill workspace
+#
+# caps + j					down arrow key
+# caps + h					left arrow key
+# caps + k					up arrow key
+# caps + l					right arrow key
+#
+# lower_brightness			script to lower brightness on intel via sysfs
+# 								the script is in ~/Documents/system_bash_scripts
+# 								the script is aliased in ~/.bashrc
+# higher_brightness			script to lower brightness on intel via sysfs
+#
+#
+# ----------------------------------------------------------------------------
+#
+# scan networks
+$ nmtui
+
+# battery management
+# https://askubuntu.com/questions/1078939/ubuntu-18-04-battery-life
+$ sudo tlp-stat -s
+$ sudo powertop
+
+# i3 volume
+# use amixer
+# https://askubuntu.com/questions/823669/volume-sound-and-screen-brightness-controls-not-working
+
+# lock on lid using systemd
+# https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout.1.html
+# also with xss-lock
+# https://www.reddit.com/r/i3wm/comments/b1kaoi/run_i3lock_before_sleep_instead_of_after/
+#
+# Understand power-management
+# https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd
+#
+# suspend vs hibernate
+# https://wiki.archlinux.org/index.php/Power_management#Suspend_and_hibernate
+#
+# how to enable hibernate
+# https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation
+
+# detailed ways of using xrandr to move workspaces
+# NOTE: we will always have one workspace on one monitor
+#
+# trick to move all workspaces to one screen
+# https://www.reddit.com/r/i3wm/comments/7glj9t/move_all_workspaces_to_one_display/
+$ i3-msg '[class=".*"]' move workspace to output DP-1
+
+# move specific workspace to output
+# https://unix.stackexchange.com/questions/397269/i3wm-how-to-move-workspaces-between-monitors
+$ i3-msg '[workspace="4"]' move workspace to output DP-1
+
+# rename workspace
+# https://i3wm.org/docs/userguide.html#assign_workspace
+#
+# and more commands to try
+# https://faq.i3wm.org/question/1657/add-friendly-name-to-workspace-but-keep-numbers-for-shortcuts.1.html
+$ i3-msg 'rename workspace "4 to DP-1" to 7'
+
+# view all
+# automatically detect display port
+# https://askubuntu.com/questions/912431/i3-for-dual-monitor-on-laptop
+#
+# understanding the xrandr command
+# https://www.x.org/releases/X11R7.5/doc/man/man1/xrandr.1.html
+#
+# how to configure i3 workspaces
+# https://i3wm.org/docs/userguide.html#multi_monitor
+#
+# this sets the external displayPort above the internet display
+$ xrandr --output DP-1 --auto --above eDP-1
+
+# show the available displays
+$ xrandr
