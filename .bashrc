@@ -130,6 +130,9 @@ alias gdiff='git diff'
 alias lower_brightness='~/Documents/system_bash_scripts/lower_brightness.sh'
 alias higher_brightness='~/Documents/system_bash_scripts/higher_brightness.sh'
 
+# command to connect display
+alias connect_primary_display='~/Documents/system_bash_scripts/connect_primary_display.sh'
+
 # always open tmux
 # https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login
 if which tmux >/dev/null 2>&1; then

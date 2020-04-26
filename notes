@@ -4,10 +4,10 @@
 # ~/.i3/config			i3 configs
 # ~/.tmux.conf			tmux configs with mappings for vim copy mode
 # ~/.xmodmap			allow for esc + h/j/k/l to become arrow keys
-# ~/.bashrc			shell configs
+# ~/.bashrc				shell configs
 #
 # ----------------------------------------------------------------------------
-# important changes to key maps to make it SEEM like a MAC
+# IMPORTANT changes to key maps to make it SEEM like a MAC
 #
 # REAL keys		MAPPED keys
 # alt			ctrl
@@ -25,13 +25,19 @@
 #   y 						yank in tmux copy mode
 #
 # alt + c					copy
-# alt + v					paste
+# alt + shift + v			paste
 #
 # window + 1				move to workspace
 # window + j				move to left workspace
 # window + ;				move to right workspace
 # window + d				open gui application
 # window + Q				kill workspace
+# window + f				focus on a workspace
+# window + 1				goes to workspace 1
+#
+# window + w				change workspace view to tabbed
+# window + e				change workspace view to default
+# window + s				change workspace view to stacked
 #
 # caps + j					down arrow key
 # caps + h					left arrow key
@@ -42,7 +48,6 @@
 # 								the script is in ~/Documents/system_bash_scripts
 # 								the script is aliased in ~/.bashrc
 # higher_brightness			script to lower brightness on intel via sysfs
-#
 #
 # ----------------------------------------------------------------------------
 #
